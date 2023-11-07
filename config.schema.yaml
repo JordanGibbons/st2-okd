@@ -1,0 +1,18 @@
+---
+  api_url:
+    description: "kubernetes api url"
+    type: "string"
+    required: true
+  bearer_token:
+    description: "bearer token"
+    type: "string"
+    required: true
+  verify:
+    description: "SSL verify"
+    type: "boolean"
+    default: false
+  template_path:
+    description: "location of okd sensor templates"
+    type: "string"
+    required: true
+    default: "/opt/stackstorm/packs/hydra-okd/"
