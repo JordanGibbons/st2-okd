@@ -1,3 +1,4 @@
+import json
 from lib.okd import OkdClient
 
 class createNamespace(OkdClient):
@@ -20,6 +21,11 @@ class createNamespace(OkdClient):
             args['yaml'] = yaml
         else:
             return (False, "yaml is a required parameter")
+
+        if name is not None:
+            args['name'] = name
+        else:
+            return (False, "name is a required parameter")
 
 
         # if 'body' in args:
