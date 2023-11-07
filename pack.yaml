@@ -4,7 +4,7 @@
 ref: hydra_okd
 # User-friendly pack name. If this attribute contains spaces or any other special characters, then
 # the "ref" attribute must also be specified (see above).
-name: Hydra OKD
+name: hydra_okd
 # User-friendly pack description.
 description: Pack containing OKD sensors, rules, and actions.
 # Keywords which are used when searching for packs.
