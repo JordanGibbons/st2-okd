@@ -33,5 +33,6 @@ class createNamespace(OkdClient):
         #     args.pop('body')
 
         v1_namespaces = self.oc().resources.get(api_version='project.openshift.io/v1', kind='Project')
-
+        print("creating namespace: " + args['name'])
         v1_namespaces.create(body=args['body'], namespace=args['name'])
+        print("Done.")
