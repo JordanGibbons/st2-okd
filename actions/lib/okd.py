@@ -25,9 +25,14 @@ class OkdClient(Action):
         apihost = self.myconfig['api_url']
         token = self.myconfig['bearer_token']
 
+        print(token)
+
         kubeConfig = OCPLoginConfiguration(api_key={"authorization": "Bearer " + token})
+
+        print("")
+        print(kubeConfig)
         kubeConfig.host = apihost
-        kubeConfig.verify_ssl = False
+        kubeConfig.verify_ssl = True
 
         if 'yaml' in args:
             # yaml_object = yaml.safe_load(args['yaml'])
