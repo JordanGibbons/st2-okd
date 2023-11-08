@@ -6,16 +6,16 @@ enabled: true
 entry_point: create.py
 parameters:
     apiVersion:
-      type: string
-      description: apiVersion of object
-      required: true
-      position: 1
+        type: string
+        description: apiVersion of object
+        required: true
+        position: 1
     kind:
-      apiVersion:
-      type: string
-      description: kind of object
-      required: true
-      position: 2
+        apiVersion:
+        type: string
+        description: kind of object
+        required: true
+        position: 2
     namespace:
         type: string
         description: namespace of object
