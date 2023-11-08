@@ -30,7 +30,8 @@ class OkdClient(Action):
         kubeConfig = OCPLoginConfiguration(api_key={"authorization": "Bearer " + token})
 
         print("")
-        print(kubeConfig)
+        print(kubeConfig.api_key)
+        print("")
         kubeConfig.host = apihost
         kubeConfig.verify_ssl = True
 
