@@ -11,5 +11,7 @@ parameters:
         required: true
         position: 1
     yaml:
-        type: string
+        type: object
         description: yaml manifest
+        required: true
+        position: 2
