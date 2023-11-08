@@ -1,0 +1,28 @@
+name: create
+pack: hydra_okd
+runner_type: "python-script"
+description: Create something with a manifest
+enabled: true
+entry_point: create.py
+parameters:
+    apiVersion:
+      type: string
+      description: apiVersion of object
+      required: true
+      position: 1
+    kind:
+      apiVersion:
+      type: string
+      description: kind of object
+      required: true
+      position: 2
+    namespace:
+        type: string
+        description: namespace of object
+        required: true
+        position: 3
+    manifest:
+        type: object
+        description: yaml manifest
+        required: true
+        position: 4
