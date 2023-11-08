@@ -18,7 +18,7 @@ class createNamespace(OkdClient):
             args['config_override'] = config_override
 
         if yaml is not None:
-            args['yaml'] = yaml
+            args['body'] = yaml
         else:
             return (False, "yaml is a required parameter")
 
