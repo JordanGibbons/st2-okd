@@ -25,14 +25,8 @@ class OkdClient(Action):
         apihost = self.myconfig['api_url']
         token = self.myconfig['bearer_token']
 
-        print(token)
-
         kubeConfig = client.Configuration()
         kubeConfig.api_key = {"authorization": "Bearer " + token}
-
-        print("")
-        print(kubeConfig.api_key)
-        print("")
         kubeConfig.host = apihost
         kubeConfig.verify_ssl = True
 
@@ -49,9 +43,13 @@ class OkdClient(Action):
     # print('Auth token: {0}'.format(kubeConfig.api_key))
     # print('Token expires: {0}'.format(kubeConfig.api_key_expires))
 
+        print("Logging into cluster!")
+        
         k8s_client = client.ApiClient(kubeConfig)
 
         dyn_client = DynamicClient(k8s_client)
+
+        print("Done.")
 
         return dyn_client
         # v1_projects = dyn_client.resources.get(api_version='project.openshift.io/v1', kind='Project')
