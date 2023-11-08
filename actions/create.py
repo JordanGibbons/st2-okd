@@ -45,6 +45,6 @@ class create(OkdClient):
         #     args.pop('body')
 
         v1_namespaces = self.oc().resources.get(api_version=args['apiVersion'], kind=args['kind'])
-        print("creating  " + args['kind'] + ": " + args['name'])
+        print("creating  " + args['kind'] + " in namespace: " + args['namespace'])
         v1_namespaces.create(body=args['body'], namespace=args['namespace'])
         print("Done.")
