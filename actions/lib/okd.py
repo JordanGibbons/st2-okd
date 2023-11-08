@@ -28,7 +28,7 @@ class OkdClient(Action):
         print(token)
 
         kubeConfig = client.configuration
-        kubeConfig.api_key = {"authorization": "Bearer " + token})
+        kubeConfig.api_key = {"authorization": "Bearer " + token}
 
         print("")
         print(kubeConfig.api_key)
